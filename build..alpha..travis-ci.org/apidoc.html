@@ -1,0 +1,2027 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/babel/eslint-plugin-babel#readme"
+
+    >eslint-plugin-babel (v4.1.1)</a>
+</h1>
+<h4>an eslint rule plugin companion to babel-eslint</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel">module eslint-plugin-babel</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>ast_utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>rules</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>rules.array-bracket-spacing</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>rules.arrow-parens</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>rules.flow-object-type</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>rules.func-params-comma-dangle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>rules.generator-star-spacing</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>rules.no-await-in-loop</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>rules.no-invalid-this</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>rules.object-shorthand</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>rules.semi</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.</span>rulesConfig</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel.ast_utils">module eslint-plugin-babel.ast_utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.getDirectivePrologue">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getDirectivePrologue
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.getLabel">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getLabel
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.getModifyingReferences">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getModifyingReferences
+            <span class="apidocSignatureSpan">(references)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.getPrecedence">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getPrecedence
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.getStaticPropertyName">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getStaticPropertyName
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.getUpperFunction">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getUpperFunction
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.getVariableByName">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getVariableByName
+            <span class="apidocSignatureSpan">(initScope, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isArrayFromMethod">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isArrayFromMethod
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isBreakableStatement">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isBreakableStatement
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isCallee">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isCallee
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isDecimalInteger">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isDecimalInteger
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isDefaultThisBinding">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isDefaultThisBinding
+            <span class="apidocSignatureSpan">(node, sourceCode)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isDirectiveComment">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isDirectiveComment
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isES5Constructor">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isES5Constructor
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isFunction">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isFunction
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isLoop">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isLoop
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isNullOrUndefined">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isNullOrUndefined
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isParenthesised">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isParenthesised
+            <span class="apidocSignatureSpan">(sourceCode, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isStringLiteral">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isStringLiteral
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isSurroundedBy">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isSurroundedBy
+            <span class="apidocSignatureSpan">(val, character)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.ast_utils.isTokenOnSameLine">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isTokenOnSameLine
+            <span class="apidocSignatureSpan">(left, right)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel.rules">module eslint-plugin-babel.rules</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.rules.new-cap">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>new-cap
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.rules.object-curly-spacing">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>object-curly-spacing
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>array-bracket-spacing</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>arrow-parens</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>flow-object-type</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>func-params-comma-dangle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>generator-star-spacing</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>no-await-in-loop</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>no-invalid-this</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>object-shorthand</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>semi</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel.rules.array-bracket-spacing">module eslint-plugin-babel.rules.array-bracket-spacing</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.rules.array-bracket-spacing.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.array-bracket-spacing.</span>create
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.array-bracket-spacing.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel.rules.arrow-parens">module eslint-plugin-babel.rules.arrow-parens</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.rules.arrow-parens.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.arrow-parens.</span>create
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.arrow-parens.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel.rules.flow-object-type">module eslint-plugin-babel.rules.flow-object-type</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.rules.flow-object-type.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.flow-object-type.</span>create
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.flow-object-type.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel.rules.func-params-comma-dangle">module eslint-plugin-babel.rules.func-params-comma-dangle</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.rules.func-params-comma-dangle.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.func-params-comma-dangle.</span>create
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.func-params-comma-dangle.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel.rules.generator-star-spacing">module eslint-plugin-babel.rules.generator-star-spacing</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.rules.generator-star-spacing.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.generator-star-spacing.</span>create
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.generator-star-spacing.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel.rules.no-await-in-loop">module eslint-plugin-babel.rules.no-await-in-loop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.rules.no-await-in-loop.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.no-await-in-loop.</span>create
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.no-await-in-loop.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel.rules.no-invalid-this">module eslint-plugin-babel.rules.no-invalid-this</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.rules.no-invalid-this.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.no-invalid-this.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.no-invalid-this.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel.rules.object-shorthand">module eslint-plugin-babel.rules.object-shorthand</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.rules.object-shorthand.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.object-shorthand.</span>create
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.object-shorthand.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eslint-plugin-babel.rules.semi">module eslint-plugin-babel.rules.semi</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eslint-plugin-babel.rules.semi.create">
+            function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.semi.</span>create
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eslint-plugin-babel.rules.semi.</span>meta</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel" id="apidoc.module.eslint-plugin-babel">module eslint-plugin-babel</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel.ast_utils" id="apidoc.module.eslint-plugin-babel.ast_utils">module eslint-plugin-babel.ast_utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.getDirectivePrologue" id="apidoc.element.eslint-plugin-babel.ast_utils.getDirectivePrologue">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getDirectivePrologue
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDirectivePrologue(node) {
+    const directives = [];
+
+    // Directive prologues only occur at the top of files or functions.
+    if (
+        node.type === &#x22;Program&#x22; ||
+        node.type === &#x22;FunctionDeclaration&#x22; ||
+        node.type === &#x22;FunctionExpression&#x22; ||
+
+        // Do not check arrow functions with implicit return.
+        // `() =&#x3e; &#x22;use strict&#x22;;` returns the string `&#x22;use strict&#x22;`.
+        (node.type === &#x22;ArrowFunctionExpression&#x22; &#x26;&#x26; node.body.type === &#x22;BlockStatement&#x22;)
+    ) {
+        const statements = node.type === &#x22;Program&#x22; ? node.body : node.body.body;
+
+        for (const statement of statements) {
+            if (
+                statement.type === &#x22;ExpressionStatement&#x22; &#x26;&#x26;
+                statement.expression.type === &#x22;Literal&#x22;
+            ) {
+                directives.push(statement);
+            } else {
+                break;
+            }
+        }
+    }
+
+    return directives;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.getLabel" id="apidoc.element.eslint-plugin-babel.ast_utils.getLabel">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getLabel
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLabel(node) {
+    if (node.parent.type === &#x22;LabeledStatement&#x22;) {
+        return node.parent.label.name;
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.getModifyingReferences" id="apidoc.element.eslint-plugin-babel.ast_utils.getModifyingReferences">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getModifyingReferences
+        <span class="apidocSignatureSpan">(references)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getModifyingReferences(references) {
+    return references.filter(isModifyingReference);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.getPrecedence" id="apidoc.element.eslint-plugin-babel.ast_utils.getPrecedence">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getPrecedence
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPrecedence(node) {
+    switch (node.type) {
+        case &#x22;SequenceExpression&#x22;:
+            return 0;
+
+        case &#x22;AssignmentExpression&#x22;:
+        case &#x22;ArrowFunctionExpression&#x22;:
+        case &#x22;YieldExpression&#x22;:
+            return 1;
+
+        case &#x22;ConditionalExpression&#x22;:
+            return 3;
+
+        case &#x22;LogicalExpression&#x22;:
+            switch (node.operator) {
+                case &#x22;||&#x22;:
+                    return 4;
+                case &#x22;&#x26;&#x26;&#x22;:
+                    return 5;
+
+                // no default
+            }
+
+<span class="apidocCodeCommentSpan">            /* falls through */
+</span>
+        case &#x22;BinaryExpression&#x22;:
+
+            switch (node.operator) {
+                case &#x22;|&#x22;:
+                    return 6;
+                case &#x22;^&#x22;:
+                    return 7;
+                case &#x22;&#x26;&#x22;:
+                    return 8;
+                case &#x22;==&#x22;:
+                case &#x22;!=&#x22;:
+                case &#x22;===&#x22;:
+                case &#x22;!==&#x22;:
+                    return 9;
+                case &#x22;&#x3c;&#x22;:
+                case &#x22;&#x3c;=&#x22;:
+                case &#x22;&#x3e;&#x22;:
+                case &#x22;&#x3e;=&#x22;:
+                case &#x22;in&#x22;:
+                case &#x22;instanceof&#x22;:
+                    return 10;
+                case &#x22;&#x3c;&#x3c;&#x22;:
+                case &#x22;&#x3e;&#x3e;&#x22;:
+                case &#x22;&#x3e;&#x3e;&#x3e;&#x22;:
+                    return 11;
+                case &#x22;+&#x22;:
+                case &#x22;-&#x22;:
+                    return 12;
+                case &#x22;*&#x22;:
+                case &#x22;/&#x22;:
+                case &#x22;%&#x22;:
+                    return 13;
+
+                // no default
+            }
+
+            /* falls through */
+
+        case &#x22;UnaryExpression&#x22;:
+        case &#x22;AwaitExpression&#x22;:
+            return 14;
+
+        case &#x22;UpdateExpression&#x22;:
+            return 15;
+
+        case &#x22;CallExpression&#x22;:
+
+            // IIFE is allowed to have parens in any position (#655)
+            if (node.callee.type === &#x22;FunctionExpression&#x22;) {
+                return -1;
+            }
+            return 16;
+
+        case &#x22;NewExpression&#x22;:
+            return 17;
+
+        // no default
+    }
+    return 18;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.getStaticPropertyName" id="apidoc.element.eslint-plugin-babel.ast_utils.getStaticPropertyName">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getStaticPropertyName
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getStaticPropertyName(node) {
+    let prop;
+
+    switch (node &#x26;&#x26; node.type) {
+        case &#x22;Property&#x22;:
+        case &#x22;MethodDefinition&#x22;:
+            prop = node.key;
+            break;
+
+        case &#x22;MemberExpression&#x22;:
+            prop = node.property;
+            break;
+
+        // no default
+    }
+
+    switch (prop &#x26;&#x26; prop.type) {
+        case &#x22;Literal&#x22;:
+            return String(prop.value);
+
+        case &#x22;TemplateLiteral&#x22;:
+            if (prop.expressions.length === 0 &#x26;&#x26; prop.quasis.length === 1) {
+                return prop.quasis[0].value.cooked;
+            }
+            break;
+
+        case &#x22;Identifier&#x22;:
+            if (!node.computed) {
+                return prop.name;
+            }
+            break;
+
+        // no default
+    }
+
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.getUpperFunction" id="apidoc.element.eslint-plugin-babel.ast_utils.getUpperFunction">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getUpperFunction
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getUpperFunction(node) {
+    while (node) {
+        if (anyFunctionPattern.test(node.type)) {
+            return node;
+        }
+        node = node.parent;
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.getVariableByName" id="apidoc.element.eslint-plugin-babel.ast_utils.getVariableByName">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>getVariableByName
+        <span class="apidocSignatureSpan">(initScope, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getVariableByName(initScope, name) {
+    let scope = initScope;
+
+    while (scope) {
+        const variable = scope.set.get(name);
+
+        if (variable) {
+            return variable;
+        }
+
+        scope = scope.upper;
+    }
+
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isArrayFromMethod" id="apidoc.element.eslint-plugin-babel.ast_utils.isArrayFromMethod">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isArrayFromMethod
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArrayFromMethod(node) {
+    return (
+        node.type === &#x22;MemberExpression&#x22; &#x26;&#x26;
+        node.object.type === &#x22;Identifier&#x22; &#x26;&#x26;
+        arrayOrTypedArrayPattern.test(node.object.name) &#x26;&#x26;
+        node.property.type === &#x22;Identifier&#x22; &#x26;&#x26;
+        node.property.name === &#x22;from&#x22; &#x26;&#x26;
+        node.computed === false
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isBreakableStatement" id="apidoc.element.eslint-plugin-babel.ast_utils.isBreakableStatement">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isBreakableStatement
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBreakableStatement(node) {
+    return breakableTypePattern.test(node.type);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isCallee" id="apidoc.element.eslint-plugin-babel.ast_utils.isCallee">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isCallee
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isCallee(node) {
+    return node.parent.type === &#x22;CallExpression&#x22; &#x26;&#x26; node.parent.callee === node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isDecimalInteger" id="apidoc.element.eslint-plugin-babel.ast_utils.isDecimalInteger">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isDecimalInteger
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isDecimalInteger(node) {
+    return node.type === &#x22;Literal&#x22; &#x26;&#x26; typeof node.value === &#x22;number&#x22; &#x26;&#x26; /^(0|[1-9]\d*)$/.test(node.raw);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isDefaultThisBinding" id="apidoc.element.eslint-plugin-babel.ast_utils.isDefaultThisBinding">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isDefaultThisBinding
+        <span class="apidocSignatureSpan">(node, sourceCode)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isDefaultThisBinding(node, sourceCode) {
+    if (isES5Constructor(node) || hasJSDocThisTag(node, sourceCode)) {
+        return false;
+    }
+    const isAnonymous = node.id === null;
+
+    while (node) {
+        const parent = node.parent;
+
+        switch (parent.type) {
+
+<span class="apidocCodeCommentSpan">            /*
+             * Looks up the destination.
+             * e.g., obj.foo = nativeFoo || function foo() { ... };
+             */
+</span>            case &#x22;LogicalExpression&#x22;:
+            case &#x22;ConditionalExpression&#x22;:
+                node = parent;
+                break;
+
+            // If the upper function is IIFE, checks the destination of the return value.
+            // e.g.
+            //   obj.foo = (function() {
+            //     // setup...
+            //     return function foo() { ... };
+            //   })();
+            case &#x22;ReturnStatement&#x22;: {
+                const func = getUpperFunction(parent);
+
+                if (func === null || !isCallee(func)) {
+                    return true;
+                }
+                node = func.parent;
+                break;
+            }
+
+            // e.g.
+            //   var obj = { foo() { ... } };
+            //   var obj = { foo: function() { ... } };
+            //   class A { constructor() { ... } }
+            //   class A { foo() { ... } }
+            //   class A { get foo() { ... } }
+            //   class A { set foo() { ... } }
+            //   class A { static foo() { ... } }
+            case &#x22;Property&#x22;:
+            case &#x22;MethodDefinition&#x22;:
+                return parent.value !== node;
+
+            // e.g.
+            //   obj.foo = function foo() { ... };
+            //   Foo = function() { ... };
+            //   [obj.foo = function foo() { ... }] = a;
+            //   [Foo = function() { ... }] = a;
+            case &#x22;AssignmentExpression&#x22;:
+            case &#x22;AssignmentPattern&#x22;:
+                if (parent.right === node) {
+                    if (parent.left.type === &#x22;MemberExpression&#x22;) {
+                        return false;
+                    }
+                    if (isAnonymous &#x26;&#x26;
+                        parent.left.type === &#x22;Identifier&#x22; &#x26;&#x26;
+                        startsWithUpperCase(parent.left.name)
+                    ) {
+                        return false;
+                    }
+                }
+                return true;
+
+            // e.g.
+            //   var Foo = function() { ... };
+            case &#x22;VariableDeclarator&#x22;:
+                return !(
+                    isAnonymous &#x26;&#x26;
+                    parent.init === node &#x26;&#x26;
+                    parent.id.type === &#x22;Identifier&#x22; &#x26;&#x26;
+                    startsWithUpperCase(parent.id.name)
+                );
+
+            // e.g.
+            //   var foo = function foo() { ... }.bind(obj);
+            //   (function foo() { ... }).call(obj);
+            //   (function foo() { ... }).apply(obj, []);
+            case &#x22;MemberExpression&#x22;:
+                return (
+                    parent.object !== node ||
+                    parent.property.type !== &#x22;Identifier&#x22; ||
+                    !bindOrCallOrApplyPattern.test(parent.property.name) ||
+                    !isCallee(parent) ||
+                    parent.parent.arguments.length === 0 ||
+                    isNullOrUndefined(parent.parent.arguments[0])
+                );
+
+            // e.g.
+            //   Reflect.apply(function() {}, obj, []);
+            //   Array.from([], function() {}, obj);
+            //   list.forEach(function() {}, obj);
+            case &#x22;CallExpression&#x22;:
+                if (isReflectApply(parent.callee)) {
+                    return (
+                        parent.arguments.length !== 3 ||
+                        parent.arguments[0] !== node ||
+                        isNullOrUndefined(parent.arguments[1])
+                    );
+                }
+                if (isArrayFromMethod(parent.callee)) {
+                    return (
+                        parent.arguments.length !== 3 ||
+                        parent.arguments[1] !== node ||
+                        isNullOrUndefined(parent.arguments[2])
+                    );
+                } ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isDirectiveComment" id="apidoc.element.eslint-plugin-babel.ast_utils.isDirectiveComment">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isDirectiveComment
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isDirectiveComment(node) {
+    const comment = node.value.trim();
+
+    return (
+        node.type === &#x22;Line&#x22; &#x26;&#x26; comment.indexOf(&#x22;eslint-&#x22;) === 0 ||
+        node.type === &#x22;Block&#x22; &#x26;&#x26; (
+            comment.indexOf(&#x22;global &#x22;) === 0 ||
+            comment.indexOf(&#x22;eslint &#x22;) === 0 ||
+            comment.indexOf(&#x22;eslint-&#x22;) === 0
+        )
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isES5Constructor" id="apidoc.element.eslint-plugin-babel.ast_utils.isES5Constructor">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isES5Constructor
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isES5Constructor(node) {
+    return (node.id &#x26;&#x26; startsWithUpperCase(node.id.name));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isFunction" id="apidoc.element.eslint-plugin-babel.ast_utils.isFunction">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isFunction
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isFunction(node) {
+    return Boolean(node &#x26;&#x26; anyFunctionPattern.test(node.type));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isLoop" id="apidoc.element.eslint-plugin-babel.ast_utils.isLoop">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isLoop
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isLoop(node) {
+    return Boolean(node &#x26;&#x26; anyLoopPattern.test(node.type));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isNullOrUndefined" id="apidoc.element.eslint-plugin-babel.ast_utils.isNullOrUndefined">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isNullOrUndefined
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isNullOrUndefined(node) {
+    return (
+        (node.type === &#x22;Literal&#x22; &#x26;&#x26; node.value === null) ||
+        (node.type === &#x22;Identifier&#x22; &#x26;&#x26; node.name === &#x22;undefined&#x22;) ||
+        (node.type === &#x22;UnaryExpression&#x22; &#x26;&#x26; node.operator === &#x22;void&#x22;)
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isParenthesised" id="apidoc.element.eslint-plugin-babel.ast_utils.isParenthesised">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isParenthesised
+        <span class="apidocSignatureSpan">(sourceCode, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isParenthesised(sourceCode, node) {
+    const previousToken = sourceCode.getTokenBefore(node),
+        nextToken = sourceCode.getTokenAfter(node);
+
+    return Boolean(previousToken &#x26;&#x26; nextToken) &#x26;&#x26;
+        previousToken.value === &#x22;(&#x22; &#x26;&#x26; previousToken.range[1] &#x3c;= node.range[0] &#x26;&#x26;
+        nextToken.value === &#x22;)&#x22; &#x26;&#x26; nextToken.range[0] &#x3e;= node.range[1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isStringLiteral" id="apidoc.element.eslint-plugin-babel.ast_utils.isStringLiteral">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isStringLiteral
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isStringLiteral(node) {
+    return (
+        (node.type === &#x22;Literal&#x22; &#x26;&#x26; typeof node.value === &#x22;string&#x22;) ||
+        node.type === &#x22;TemplateLiteral&#x22;
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isSurroundedBy" id="apidoc.element.eslint-plugin-babel.ast_utils.isSurroundedBy">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isSurroundedBy
+        <span class="apidocSignatureSpan">(val, character)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isSurroundedBy(val, character) {
+    return val[0] === character &#x26;&#x26; val[val.length - 1] === character;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.ast_utils.isTokenOnSameLine" id="apidoc.element.eslint-plugin-babel.ast_utils.isTokenOnSameLine">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.ast_utils.</span>isTokenOnSameLine
+        <span class="apidocSignatureSpan">(left, right)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isTokenOnSameLine(left, right) {
+    return left.loc.end.line === right.loc.start.line;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel.rules" id="apidoc.module.eslint-plugin-babel.rules">module eslint-plugin-babel.rules</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.rules.new-cap" id="apidoc.element.eslint-plugin-babel.rules.new-cap">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>new-cap
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">new-cap = function (context) {
+
+    var config = context.options[0] || {};
+    var NEW_IS_CAP = config.newIsCap !== false;
+    var CAP_IS_NEW = config.capIsNew !== false;
+
+    var newIsCapExceptions = checkArray(config, &#x22;newIsCapExceptions&#x22;, []).reduce(invert, {});
+
+    var capIsNewExceptions = calculateCapIsNewExceptions(config);
+
+    var listeners = {};
+
+    //--------------------------------------------------------------------------
+    // Helpers
+    //--------------------------------------------------------------------------
+
+<span class="apidocCodeCommentSpan">    /**
+     * Get exact callee name from expression
+     * @param {ASTNode} node CallExpression or NewExpression node
+     * @returns {string} name
+     */
+</span>    function extractNameFromExpression(node) {
+
+        var name = &#x22;&#x22;,
+            property;
+
+        if (node.callee.type === &#x22;MemberExpression&#x22;) {
+            property = node.callee.property;
+
+            if (property.type === &#x22;Literal&#x22; &#x26;&#x26; (typeof property.value === &#x22;string&#x22;)) {
+                name = property.value;
+            } else if (property.type === &#x22;Identifier&#x22; &#x26;&#x26; !node.callee.computed) {
+                name = property.name;
+            }
+        } else {
+            name = node.callee.name;
+        }
+        return name;
+    }
+
+    /**
+     * Returns the capitalization state of the string -
+     * Whether the first character is uppercase, lowercase, or non-alphabetic
+     * @param {string} str String
+     * @returns {string} capitalization state: &#x22;non-alpha&#x22;, &#x22;lower&#x22;, or &#x22;upper&#x22;
+     */
+    function getCap(str) {
+        var firstChar = str.charAt(0);
+
+        var firstCharLower = firstChar.toLowerCase();
+        var firstCharUpper = firstChar.toUpperCase();
+
+        if (firstCharLower === firstCharUpper) {
+            // char has no uppercase variant, so it&#x27;s non-alphabetic
+            return &#x22;non-alpha&#x22;;
+        } else if (firstChar === firstCharLower) {
+            return &#x22;lower&#x22;;
+        } else {
+            return &#x22;upper&#x22;;
+        }
+    }
+
+    /**
+     * Returns whether a node is under a decorator or not.
+     * @param  {ASTNode}  node CallExpression node
+     * @returns {Boolean} Returns true if the node is under a decorator.
+     */
+    function isDecorator(node) {
+        return node.parent.type === &#x22;Decorator&#x22;;
+    }
+
+    /**
+     * Check if capitalization is allowed for a CallExpression
+     * @param {Object} allowedMap Object mapping calleeName to a Boolean
+     * @param {ASTNode} node CallExpression node
+     * @param {string} calleeName Capitalized callee name from a CallExpression
+     * @returns {Boolean} Returns true if the callee may be capitalized
+     */
+    function isCapAllowed(allowedMap, node, calleeName) {
+        if (allowedMap[calleeName] || allowedMap[context.getSource(node.callee)]) {
+            return true;
+        }
+        if (calleeName === &#x22;UTC&#x22; &#x26;&#x26; node.callee.type === &#x22;MemberExpression&#x22;) {
+            // allow if callee is Date.UTC
+            return node.callee.object.type === &#x22;Identifier&#x22; &#x26;&#x26;
+                node.callee.object.name === &#x22;Date&#x22;;
+        }
+        return false;
+    }
+
+    /**
+     * Reports the given message for the given node. The location will be the start of the property or the callee.
+     * @param {ASTNode} node CallExpression or NewExpression node.
+     * @param {string} message The message to report.
+     * @returns {void}
+     */
+    function report(node, message) {
+        var callee = node.callee;
+
+        if (callee.type === &#x22;MemberExpression&#x22;) {
+            callee = callee.property;
+        }
+
+        context.report(node, callee.loc.start, message);
+    }
+
+    //--------------------------------------------------------------------------
+    // Public
+    //--------------------------------------------------------------------------
+
+    if (NEW_IS_CAP) {
+        listeners.NewExpression = function(node) {
+
+            var constructorName = extractNameFromExpression(node);
+            if (constructorName) {
+                var capitalization = getCap(constructorName);
+                var isAllowed = capitalization !== &#x22;lower&#x22; || isCapAllowed(newIsCapExceptions, node, constructorNam ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.rules.object-curly-spacing" id="apidoc.element.eslint-plugin-babel.rules.object-curly-spacing">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.</span>object-curly-spacing
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">object-curly-spacing = function (context) {
+    var spaced = context.options[0] === &#x22;always&#x22;,
+        sourceCode = context.getSourceCode();
+
+<span class="apidocCodeCommentSpan">    /**
+     * Determines whether an option is set, relative to the spacing option.
+     * If spaced is &#x22;always&#x22;, then check whether option is set to false.
+     * If spaced is &#x22;never&#x22;, then check whether option is set to true.
+     * @param {Object} option - The option to exclude.
+     * @returns {boolean} Whether or not the property is excluded.
+     */
+</span>    function isOptionSet(option) {
+        return context.options[1] != null ? context.options[1][option] === !spaced : false;
+    }
+
+    var options = {
+        spaced: spaced,
+        arraysInObjectsException: isOptionSet(&#x22;arraysInObjects&#x22;),
+        objectsInObjectsException: isOptionSet(&#x22;objectsInObjects&#x22;)
+    };
+
+    //--------------------------------------------------------------------------
+    // Helpers
+    //--------------------------------------------------------------------------
+
+    /**
+     * Determines whether two adjacent tokens are have whitespace between them.
+     * @param {Object} left - The left token object.
+     * @param {Object} right - The right token object.
+     * @returns {boolean} Whether or not there is space between the tokens.
+     */
+    function isSpaced(left, right) {
+        return sourceCode.isSpaceBetweenTokens(left, right);
+    }
+
+    /**
+     * Determines whether two adjacent tokens are on the same line.
+     * @param {Object} left - The left token object.
+     * @param {Object} right - The right token object.
+     * @returns {boolean} Whether or not the tokens are on the same line.
+     */
+    function isSameLine(left, right) {
+        return left.loc.start.line === right.loc.start.line;
+    }
+
+    /**
+    * Reports that there shouldn&#x27;t be a space after the first token
+    * @param {ASTNode} node - The node to report in the event of an error.
+    * @param {Token} token - The token to use for the report.
+    * @returns {void}
+    */
+    function reportNoBeginningSpace(node, token) {
+        context.report({
+            node: node,
+            loc: token.loc.end,
+            message: &#x22;There should be no space after &#x27;&#x22; + token.value + &#x22;&#x27;&#x22;,
+            fix: function(fixer) {
+                var nextToken = sourceCode.getTokenAfter(token);
+                return fixer.removeRange([token.range[1], nextToken.range[0]]);
+            }
+        });
+    }
+
+    /**
+    * Reports that there shouldn&#x27;t be a space before the last token
+    * @param {ASTNode} node - The node to report in the event of an error.
+    * @param {Token} token - The token to use for the report.
+    * @returns {void}
+    */
+    function reportNoEndingSpace(node, token) {
+        context.report({
+            node: node,
+            loc: token.loc.start,
+            message: &#x22;There should be no space before &#x27;&#x22; + token.value + &#x22;&#x27;&#x22;,
+            fix: function(fixer) {
+                var previousToken = sourceCode.getTokenBefore(token);
+                return fixer.removeRange([previousToken.range[1], token.range[0]]);
+            }
+        });
+    }
+
+    /**
+    * Reports that there should be a space after the first token
+    * @param {ASTNode} node - The node to report in the event of an error.
+    * @param {Token} token - The token to use for the report.
+    * @returns {void}
+    */
+    function reportRequiredBeginningSpace(node, token) {
+        context.report({
+            node: node,
+            loc: token.loc.end,
+            message: &#x22;A space is required after &#x27;&#x22; + token.value + &#x22;&#x27;&#x22;,
+            fix: function(fixer) {
+                return fixer.insertTextAfter(token, &#x22; &#x22;);
+            }
+        });
+    }
+
+    /**
+    * Reports that there should be a space before the last token
+    * @param {ASTNode} node - The node to report in the event of an error.
+    * @param {Token} token - The token to use for the report.
+    * @returns {void}
+    */
+    function reportRequiredEndingSpace(node, token) {
+        context.report({
+            node: node,
+            loc: token.loc.start,
+            message: &#x22;A space is required before &#x27;&#x22; + token.value + &#x22;&#x27;&#x22;, ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel.rules.array-bracket-spacing" id="apidoc.module.eslint-plugin-babel.rules.array-bracket-spacing">module eslint-plugin-babel.rules.array-bracket-spacing</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.rules.array-bracket-spacing.create" id="apidoc.element.eslint-plugin-babel.rules.array-bracket-spacing.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.array-bracket-spacing.</span>create
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function () {
+    return {
+        Program: function() {
+            if (isWarnedForDeprecation || /\=-(f|-format)=/.test(process.argv.join(&#x27;=&#x27;))) {
+                return;
+            }
+
+<span class="apidocCodeCommentSpan">            /* eslint-disable no-console */
+</span>            console.log(&#x27;The babel/array-bracket-spacing rule is deprecated. Please &#x27; +
+                        &#x27;use the built in array-bracket-spacing rule instead.&#x27;);
+            /* eslint-enable no-console */
+            isWarnedForDeprecation = true;
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel.rules.arrow-parens" id="apidoc.module.eslint-plugin-babel.rules.arrow-parens">module eslint-plugin-babel.rules.arrow-parens</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.rules.arrow-parens.create" id="apidoc.element.eslint-plugin-babel.rules.arrow-parens.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.arrow-parens.</span>create
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function () {
+    return {
+        Program: function() {
+            if (isWarnedForDeprecation || /\=-(f|-format)=/.test(process.argv.join(&#x27;=&#x27;))) {
+                return;
+            }
+
+<span class="apidocCodeCommentSpan">            /* eslint-disable no-console */
+</span>            console.log(&#x27;The babel/arrow-parens rule is deprecated. Please &#x27; +
+                        &#x27;use the built in arrow-parens rule instead.&#x27;);
+            /* eslint-enable no-console */
+            isWarnedForDeprecation = true;
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel.rules.flow-object-type" id="apidoc.module.eslint-plugin-babel.rules.flow-object-type">module eslint-plugin-babel.rules.flow-object-type</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.rules.flow-object-type.create" id="apidoc.element.eslint-plugin-babel.rules.flow-object-type.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.flow-object-type.</span>create
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function () {
+    return {
+        Program: function() {
+            if (isWarnedForDeprecation || /\=-(f|-format)=/.test(process.argv.join(&#x27;=&#x27;))) {
+                return;
+            }
+
+<span class="apidocCodeCommentSpan">            /* eslint-disable no-console */
+</span>            console.log(&#x27;The babel/flow-object-type rule is deprecated. Please &#x27; +
+                        &#x27;use the flowtype/object-type-delimiter rule instead.\n&#x27; +
+                        &#x27;Check out https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-object-type-delimiter
+&#x27;);
+            /* eslint-enable no-console */
+            isWarnedForDeprecation = true;
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel.rules.func-params-comma-dangle" id="apidoc.module.eslint-plugin-babel.rules.func-params-comma-dangle">module eslint-plugin-babel.rules.func-params-comma-dangle</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.rules.func-params-comma-dangle.create" id="apidoc.element.eslint-plugin-babel.rules.func-params-comma-dangle.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.func-params-comma-dangle.</span>create
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function () {
+    return {
+        Program: function() {
+            if (isWarnedForDeprecation || /\=-(f|-format)=/.test(process.argv.join(&#x27;=&#x27;))) {
+                return;
+            }
+
+<span class="apidocCodeCommentSpan">            /* eslint-disable no-console */
+</span>            console.log(&#x27;The babel/func-params-comma-dangle rule is deprecated. Please &#x27; +
+                        &#x27;use the built in comma-dangle rule instead.&#x27;);
+            /* eslint-enable no-console */
+            isWarnedForDeprecation = true;
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel.rules.generator-star-spacing" id="apidoc.module.eslint-plugin-babel.rules.generator-star-spacing">module eslint-plugin-babel.rules.generator-star-spacing</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.rules.generator-star-spacing.create" id="apidoc.element.eslint-plugin-babel.rules.generator-star-spacing.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.generator-star-spacing.</span>create
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function () {
+    return {
+        Program: function() {
+            if (isWarnedForDeprecation || /\=-(f|-format)=/.test(process.argv.join(&#x27;=&#x27;))) {
+                return;
+            }
+
+<span class="apidocCodeCommentSpan">            /* eslint-disable no-console */
+</span>            console.log(&#x27;The babel/generator-star-spacing rule is deprecated. Please &#x27; +
+                        &#x27;use the built in generator-star-spacing rule instead.&#x27;);
+            /* eslint-enable no-console */
+            isWarnedForDeprecation = true;
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel.rules.no-await-in-loop" id="apidoc.module.eslint-plugin-babel.rules.no-await-in-loop">module eslint-plugin-babel.rules.no-await-in-loop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.rules.no-await-in-loop.create" id="apidoc.element.eslint-plugin-babel.rules.no-await-in-loop.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.no-await-in-loop.</span>create
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function () {
+    return {
+        Program: function() {
+            if (isWarnedForDeprecation || /\=-(f|-format)=/.test(process.argv.join(&#x27;=&#x27;))) {
+                return;
+            }
+
+<span class="apidocCodeCommentSpan">            /* eslint-disable no-console */
+</span>            console.log(&#x27;The babel/no-await-in-loop rule is deprecated. Please &#x27; +
+                        &#x27;use the built in no-await-in-loop rule instead.&#x27;);
+            /* eslint-enable no-console */
+            isWarnedForDeprecation = true;
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel.rules.no-invalid-this" id="apidoc.module.eslint-plugin-babel.rules.no-invalid-this">module eslint-plugin-babel.rules.no-invalid-this</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.rules.no-invalid-this.create" id="apidoc.element.eslint-plugin-babel.rules.no-invalid-this.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.no-invalid-this.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create(context) {
+    const stack = [],
+        sourceCode = context.getSourceCode();
+
+    let insideClassProperty = false;
+
+<span class="apidocCodeCommentSpan">    /**
+     * Gets the current checking context.
+     *
+     * The return value has a flag that whether or not `this` keyword is valid.
+     * The flag is initialized when got at the first time.
+     *
+     * @returns {{valid: boolean}}
+     *   an object which has a flag that whether or not `this` keyword is valid.
+     */
+</span>    stack.getCurrent = function() {
+        const current = this[this.length - 1];
+
+        if (!current.init) {
+            current.init = true;
+            current.valid = !astUtils.isDefaultThisBinding(
+                current.node,
+                sourceCode);
+        }
+        return current;
+    };
+
+    /**
+     * `this` should be fair game anywhere inside a class property.
+     *
+     * @returns {void}
+     */
+    function enterClassProperty() {
+        insideClassProperty = true;
+    }
+
+    /**
+     * Back to the normal check.
+     * @returns {void}
+     */
+    function exitClassProperty() {
+        insideClassProperty = false;
+    }
+
+    /**
+     * Pushs new checking context into the stack.
+     *
+     * The checking context is not initialized yet.
+     * Because most functions don&#x27;t have `this` keyword.
+     * When `this` keyword was found, the checking context is initialized.
+     *
+     * @param {ASTNode} node - A function node that was entered.
+     * @returns {void}
+     */
+    function enterFunction(node) {
+
+        // `this` can be invalid only under strict mode.
+        stack.push({
+            init: !context.getScope().isStrict,
+            node,
+            valid: true
+        });
+    }
+
+    /**
+     * Pops the current checking context from the stack.
+     * @returns {void}
+     */
+    function exitFunction() {
+        stack.pop();
+    }
+
+    return {
+
+        /*
+         * `this` is invalid only under strict mode.
+         * Modules is always strict mode.
+         */
+        Program(node) {
+            const scope = context.getScope(),
+                features = context.parserOptions.ecmaFeatures || {};
+
+            stack.push({
+                init: true,
+                node,
+                valid: !(
+                    scope.isStrict ||
+                    node.sourceType === &#x22;module&#x22; ||
+                    (features.globalReturn &#x26;&#x26; scope.childScopes[0].isStrict)
+                )
+            });
+        },
+
+        &#x22;Program:exit&#x22;() {
+            stack.pop();
+        },
+
+        ClassProperty: enterClassProperty,
+        &#x22;ClassProperty:exit&#x22;: exitClassProperty,
+        FunctionDeclaration: enterFunction,
+        &#x22;FunctionDeclaration:exit&#x22;: exitFunction,
+        FunctionExpression: enterFunction,
+        &#x22;FunctionExpression:exit&#x22;: exitFunction,
+
+        // Reports if `this` of the current context is invalid.
+        ThisExpression(node) {
+            const current = stack.getCurrent();
+
+            if (!insideClassProperty &#x26;&#x26; current &#x26;&#x26; !current.valid) {
+                context.report(node, &#x22;Unexpected &#x27;this&#x27;.&#x22;);
+            }
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel.rules.object-shorthand" id="apidoc.module.eslint-plugin-babel.rules.object-shorthand">module eslint-plugin-babel.rules.object-shorthand</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.rules.object-shorthand.create" id="apidoc.element.eslint-plugin-babel.rules.object-shorthand.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.object-shorthand.</span>create
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function () {
+    return {
+        Program: function() {
+            if (isWarnedForDeprecation || /\=-(f|-format)=/.test(process.argv.join(&#x27;=&#x27;))) {
+                return;
+            }
+
+<span class="apidocCodeCommentSpan">            /* eslint-disable no-console */
+</span>            console.log(&#x27;The babel/object-shorthand rule is deprecated. Please &#x27; +
+                        &#x27;use the built in object-shorthand rule instead.&#x27;);
+            /* eslint-enable no-console */
+            isWarnedForDeprecation = true;
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eslint-plugin-babel.rules.semi" id="apidoc.module.eslint-plugin-babel.rules.semi">module eslint-plugin-babel.rules.semi</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eslint-plugin-babel.rules.semi.create" id="apidoc.element.eslint-plugin-babel.rules.semi.create">
+        function <span class="apidocSignatureSpan">eslint-plugin-babel.rules.semi.</span>create
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create(context) {
+
+    const OPT_OUT_PATTERN = /^[-[(/+`]/; // One of [(/+-`
+    const options = context.options[1];
+    const never = context.options[0] === &#x22;never&#x22;,
+        exceptOneLine = options &#x26;&#x26; options.omitLastInOneLineBlock === true,
+        sourceCode = context.getSourceCode();
+
+    //--------------------------------------------------------------------------
+    // Helpers
+    //--------------------------------------------------------------------------
+
+<span class="apidocCodeCommentSpan">    /**
+     * Reports a semicolon error with appropriate location and message.
+     * @param {ASTNode} node The node with an extra or missing semicolon.
+     * @param {boolean} missing True if the semicolon is missing.
+     * @returns {void}
+     */
+</span>    function report(node, missing) {
+        const lastToken = sourceCode.getLastToken(node);
+        let message,
+            fix,
+            loc = lastToken.loc;
+
+        if (!missing) {
+            message = &#x22;Missing semicolon.&#x22;;
+            loc = loc.end;
+            fix = function(fixer) {
+                return fixer.insertTextAfter(lastToken, &#x22;;&#x22;);
+            };
+        } else {
+            message = &#x22;Extra semicolon.&#x22;;
+            loc = loc.start;
+            fix = function(fixer) {
+                return fixer.remove(lastToken);
+            };
+        }
+
+        context.report({
+            node,
+            loc,
+            message,
+            fix
+        });
+
+    }
+
+    /**
+     * Checks whether a token is a semicolon punctuator.
+     * @param {Token} token The token.
+     * @returns {boolean} True if token is a semicolon punctuator.
+     */
+    function isSemicolon(token) {
+        return (token.type === &#x22;Punctuator&#x22; &#x26;&#x26; token.value === &#x22;;&#x22;);
+    }
+
+    /**
+     * Check if a semicolon is unnecessary, only true if:
+     *   - next token is on a new line and is not one of the opt-out tokens
+     *   - next token is a valid statement divider
+     * @param {Token} lastToken last token of current node.
+     * @returns {boolean} whether the semicolon is unnecessary.
+     */
+    function isUnnecessarySemicolon(lastToken) {
+        if (!isSemicolon(lastToken)) {
+            return false;
+        }
+
+        const nextToken = sourceCode.getTokenAfter(lastToken);
+
+        if (!nextToken) {
+            return true;
+        }
+
+        const lastTokenLine = lastToken.loc.end.line;
+        const nextTokenLine = nextToken.loc.start.line;
+        const isOptOutToken = OPT_OUT_PATTERN.test(nextToken.value) &#x26;&#x26; nextToken.value !== &#x22;++&#x22; &#x26;&#x26; nextToken.value !== &#x22;--&#x22;;
+        const isDivider = (nextToken.value === &#x22;}&#x22; || nextToken.value === &#x22;;&#x22;);
+
+        return (lastTokenLine !== nextTokenLine &#x26;&#x26; !isOptOutToken) || isDivider;
+    }
+
+    /**
+     * Checks a node to see if it&#x27;s in a one-liner block statement.
+     * @param {ASTNode} node The node to check.
+     * @returns {boolean} whether the node is in a one-liner block statement.
+     */
+    function isOneLinerBlock(node) {
+        const nextToken = sourceCode.getTokenAfter(node);
+
+        if (!nextToken || nextToken.value !== &#x22;}&#x22;) {
+            return false;
+        }
+
+        const parent = node.parent;
+
+        return parent &#x26;&#x26; parent.type === &#x22;BlockStatement&#x22; &#x26;&#x26;
+          parent.loc.start.line === parent.loc.end.line;
+    }
+
+    /**
+     * Checks a node to see if it&#x27;s followed by a semicolon.
+     * @param {ASTNode} node The node to check.
+     * @returns {void}
+     */
+    function checkForSemicolon(node) {
+        const lastToken = sourceCode.getLastToken(node);
+
+        if (never) {
+            if (isUnnecessarySemicolon(lastToken)) {
+                report(node, true);
+            }
+        } else {
+            if (!isSemicolon(lastToken)) {
+                if (!exceptOneLine || !isOneLinerBlock(node)) {
+                    report(node);
+                }
+            } else {
+                if (exceptOneLine &#x26;&#x26; isOneLinerBlock(node)) {
+                    report(node, true);
+                }
+            }
+        }
+    }
+
+    /**
+     * Checks to see if there&#x27;s a semicolon after a variable declaration.
+     * @param {ASTNode} node The node to check.
+     * @return ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
