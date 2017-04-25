@@ -1,6 +1,6 @@
 # npmdoc-eslint-plugin-babel
 
-#### api documentation for  [eslint-plugin-babel (v4.1.1)](https://github.com/babel/eslint-plugin-babel#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-eslint-plugin-babel.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eslint-plugin-babel) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-babel.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-babel)
+#### basic api documentation for  [eslint-plugin-babel (v4.1.1)](https://github.com/babel/eslint-plugin-babel#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-eslint-plugin-babel.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eslint-plugin-babel) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-babel.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eslint-plugin-babel)
 
 #### an eslint rule plugin companion to babel-eslint
 
@@ -77,7 +77,8 @@
     "scripts": {
         "test": "mocha ./tests/rules/*.js"
     },
-    "version": "4.1.1"
+    "version": "4.1.1",
+    "bin": {}
 }
 ```
 
